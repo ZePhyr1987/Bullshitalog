@@ -30,5 +30,6 @@ should be all :)
 
 Roadmap:<br>
 -switch reload to ajax<br>
+-cleanup
 -maybe add admin say / map change etc<br>
 -maybe rcon input<br>
