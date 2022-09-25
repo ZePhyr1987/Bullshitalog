@@ -28,7 +28,7 @@ should be all :)
 
 
 
-Roadmap:
--switch reload to ajax
--maybe add admin say / map change etc
--maybe rcon input
+Roadmap:<br>
+-switch reload to ajax<br>
+-maybe add admin say / map change etc<br>
+-maybe rcon input<br>
