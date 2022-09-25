@@ -19,9 +19,12 @@ background:#000000;
 }
 
 .log-wrap {
+	position: relative;
+	left: 0;
+	top: 4em;
+	width: 100%;
 	overflow:auto;
-	
-	width:100%;}
+	z-index: 10;}
 
 
 .chatdn {
@@ -48,7 +51,8 @@ border-radius: 4px;
 padding: 7px 25px 7px 25px;
 border: #666 1px solid;
 border-radius: 4px;
-margin-right: 30px;}
+margin-right: 30px;
+float:right;}
 
 
 .chatg {
@@ -80,7 +84,8 @@ color:#000000;
 padding: 7px 25px 7px 25px;
 border: #666 1px solid;
 border-radius: 4px;
-margin-right: 30px;}
+margin-right: 30px;
+float:right;}
 
 
 .chatt1 {
@@ -109,7 +114,8 @@ color:#000000;
 padding: 7px 25px 7px 25px;
 border: #666 1px solid;
 border-radius: 4px;
-margin-right: 30px;}
+margin-right: 30px;
+float:right;}
 
 
 .chatt0 {
@@ -150,8 +156,27 @@ a:hover {
 a:active {
   color: #66cc66;
 }
+
+.header {
+
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  font-family:    "monospace","Courier New","Lucida Console";
+                font-size:      1em;
+  line-height:1em;
+                font-weight:    regular;
+				font-style: normal;
+  background-color: black;
+  color: white;
+  }
+
 .footer {
   position: fixed;
+  z-index: 20;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -170,7 +195,7 @@ a:active {
 </HEAD>
 <body>
 
-
+<div class="header">
 
 <?php
 $filename = $_GET['filename'] ?? './Insurgency-chat1.log';
@@ -183,7 +208,14 @@ Lines: $lines_";
 ?>
 <br>
 &emsp; Reload: <a href="index.php?status=5&filename=<?php echo $filename; ?>&lines=<?php echo $lines_; ?>">Start</a> / 
-<a href="index.php?status=Stop&filename=<?php echo $filename; ?>&lines=<?php echo $lines_; ?>">Stop</a>
+<a href="index.php?status=Stop&filename=<?php echo $filename; ?>&lines=<?php echo $lines_; ?>">Stop</a> &emsp;|&emsp;
+
+<a href="index.php?status=<?php echo $status; ?>&filename=./Insurgency-chat1.log&lines=<?php echo $lines_; ?>">Server1</a>&emsp;
+<a href="index.php?status=<?php echo $status; ?>&filename=./Insurgency-chat2.log&lines=<?php echo $lines_; ?>">Server2</a>&emsp;
+<a href="index.php?status=<?php echo $status; ?>&filename=./Insurgency-chat3.log&lines=<?php echo $lines_; ?>">Server3</a>&emsp;
+<a href="index.php?status=<?php echo $status; ?>&filename=./Insurgency-chat4.log&lines=<?php echo $lines_; ?>">Server4</a>
+
+
 <br>
 &emsp; Lines: <a href="index.php?status=<?php echo $status; ?>&filename=<?php echo $filename; ?>&lines=50">50</a> / 
 <a href="index.php?status=<?php echo $status; ?>&filename=<?php echo $filename; ?>&lines=100">100</a> / 
@@ -191,21 +223,11 @@ Lines: $lines_";
 <a href="index.php?status=<?php echo $status; ?>&filename=<?php echo $filename; ?>&lines=400">400</a> / 
 <a href="index.php?status=<?php echo $status; ?>&filename=<?php echo $filename; ?>&lines=800">800</a>
 
-<br>
-
-
-
-<br>
-<span class='chatg_'><a href="index.php?status=<?php echo $status; ?>&filename=./Insurgency-chat1.log&lines=<?php echo $lines_; ?>">Server1</a></span>
-<span class='chatg_'><a href="index.php?status=<?php echo $status; ?>&filename=./Insurgency-chat2.log&lines=<?php echo $lines_; ?>">Server2</a></span>
-<span class='chatg_'><a href="index.php?status=<?php echo $status; ?>&filename=./Insurgency-chat3.log&lines=<?php echo $lines_; ?>">Server3</a></span>
-<span class='chatg_'><a href="index.php?status=<?php echo $status; ?>&filename=./Insurgency-chat4.log&lines=<?php echo $lines_; ?>">Server4</a></span>
 <span class='chatg_'>Global</span>
 <span class='chatt1_'>Team 1</span>
 <span class='chatt0_'>Team 0</span>
+</div>
 
-<br>
-<br>
 <div class="log-wrap">
 <?php
 include 'reverseline.php';
