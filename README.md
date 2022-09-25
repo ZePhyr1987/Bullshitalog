@@ -25,3 +25,10 @@ screen -mdS "LogIS1" sudo multitail -a /var/www/html/log/Insurgency-chat1.log -E
 change Multitail commands to your file structure.<br>
 *Make sure the files created are set to chmod 644*<br>
 should be all :)
+
+
+
+Roadmap:
+-switch reload to ajax
+-maybe add admin say / map change etc
+-maybe rcon input
