@@ -5,6 +5,7 @@
  <TITLE>Bullshitalog</TITLE>
  
  <?php
+$url = strtok($_SERVER["REQUEST_URI"], '?');
     $status = $_GET['status'] ?? '5';
     $url1=$_SERVER['REQUEST_URI'];
     header("Refresh:{$status}; URL=$url1");
@@ -207,21 +208,21 @@ Server: $filename &emsp;
 Lines: $lines_";
 ?>
 <br>
-&emsp; Reload: <a href="index.php?status=5&filename=<?php echo $filename; ?>&lines=<?php echo $lines_; ?>">Start</a> / 
-<a href="index.php?status=Stop&filename=<?php echo $filename; ?>&lines=<?php echo $lines_; ?>">Stop</a> &emsp;|&emsp;
+&emsp; Reload: <a href="<?php echo $url ?>?status=5&filename=<?php echo $filename; ?>&lines=<?php echo $lines_; ?>">Start</a> / 
+<a href="<?php echo $url ?>?status=Stop&filename=<?php echo $filename; ?>&lines=<?php echo $lines_; ?>">Stop</a> &emsp;|&emsp;
 
-<a href="index.php?status=<?php echo $status; ?>&filename=./Insurgency-chat1.log&lines=<?php echo $lines_; ?>">Server1</a>&emsp;
-<a href="index.php?status=<?php echo $status; ?>&filename=./Insurgency-chat2.log&lines=<?php echo $lines_; ?>">Server2</a>&emsp;
-<a href="index.php?status=<?php echo $status; ?>&filename=./Insurgency-chat3.log&lines=<?php echo $lines_; ?>">Server3</a>&emsp;
-<a href="index.php?status=<?php echo $status; ?>&filename=./Insurgency-chat4.log&lines=<?php echo $lines_; ?>">Server4</a>
+<a href="<?php echo $url ?>?status=<?php echo $status; ?>&filename=./Insurgency-chat1.log&lines=<?php echo $lines_; ?>">Server1</a>&emsp;
+<a href="<?php echo $url ?>?status=<?php echo $status; ?>&filename=./Insurgency-chat2.log&lines=<?php echo $lines_; ?>">Server2</a>&emsp;
+<a href="<?php echo $url ?>?status=<?php echo $status; ?>&filename=./Insurgency-chat3.log&lines=<?php echo $lines_; ?>">Server3</a>&emsp;
+<a href="<?php echo $url ?>?status=<?php echo $status; ?>&filename=./Insurgency-chat4.log&lines=<?php echo $lines_; ?>">Server4</a>
 
 
 <br>
-&emsp; Lines: <a href="index.php?status=<?php echo $status; ?>&filename=<?php echo $filename; ?>&lines=50">50</a> / 
-<a href="index.php?status=<?php echo $status; ?>&filename=<?php echo $filename; ?>&lines=100">100</a> / 
-<a href="index.php?status=<?php echo $status; ?>&filename=<?php echo $filename; ?>&lines=200">200</a> / 
-<a href="index.php?status=<?php echo $status; ?>&filename=<?php echo $filename; ?>&lines=400">400</a> / 
-<a href="index.php?status=<?php echo $status; ?>&filename=<?php echo $filename; ?>&lines=800">800</a>
+&emsp; Lines: <a href="<?php echo $url ?>?status=<?php echo $status; ?>&filename=<?php echo $filename; ?>&lines=50">50</a> / 
+<a href="<?php echo $url ?>?status=<?php echo $status; ?>&filename=<?php echo $filename; ?>&lines=100">100</a> / 
+<a href="<?php echo $url ?>?status=<?php echo $status; ?>&filename=<?php echo $filename; ?>&lines=200">200</a> / 
+<a href="<?php echo $url ?>?status=<?php echo $status; ?>&filename=<?php echo $filename; ?>&lines=400">400</a> / 
+<a href="<?php echo $url ?>?status=<?php echo $status; ?>&filename=<?php echo $filename; ?>&lines=800">800</a>
 
 <span class='chatg_'>Global</span>
 <span class='chatt1_'>Team 1</span>
