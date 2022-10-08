@@ -2,6 +2,7 @@
 <div class="hl">
 <?php
 $url = strtok($_SERVER["REQUEST_URI"], '?');
+if ($url = 'main.php') { $url = "" ;}
 $status = $_GET['status'] ?? '20';
 $filename = $_GET['filename'] ?? './Insurgency-chat1.log';
 $lines_ = $_GET['lines'] ?? '100';
