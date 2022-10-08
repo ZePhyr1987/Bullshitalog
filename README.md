@@ -1,5 +1,6 @@
 # Bullshitalog<br>
 Log file to Web Frontend (Insurgency Sandstorm Chat Log)<p>
+![sandlog](https://user-images.githubusercontent.com/4016000/194682464-028cfa99-5890-432f-ba52-9361bda48a45.jpg)
 
 
 Since I wanted something small and nice for chat log analysis, here is my solution:<br>
@@ -25,9 +26,22 @@ screen -mdS "LogIS1" sudo multitail -a /var/www/html/log/Insurgency-chat1.log -E
 change Multitail commands to your file structure.<br>
 *Make sure the files created are set to chmod 644*<br>
 should be all :)
+--------------------------------------------------------------------------------------------------------------------------------
+OBS CSS example:
 
+![obssandlog](https://user-images.githubusercontent.com/4016000/194682395-77c82aba-838f-4803-8ca7-c5f438aec567.jpg)
 
-
+<code>body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
+.header,.hr,.hl {display: none;}
+.log-wrap {
+	position: 	fixed;
+	left: 		0;
+	top: 		0em;
+	width:calc(100% - 46x);
+	overflow:	auto;
+}
+</code>
+--------------------------------------------------------------------------------------------------------------------------------
 Roadmap:<br>
 -maybe add admin say / map change etc<br>
 -maybe rcon input<br>
