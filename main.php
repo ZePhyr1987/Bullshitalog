@@ -1,6 +1,7 @@
 <div class="header">
 <div class="hl">
 <?php
+$url = strtok($_SERVER["REQUEST_URI"], '?');
 $status = $_GET['status'] ?? '20';
 $filename = $_GET['filename'] ?? './Insurgency-chat1.log';
 $lines_ = $_GET['lines'] ?? '100';
@@ -17,12 +18,10 @@ Lines:
 <a href="<?php echo $url ?>?status=<?php echo $status; ?>&filename=<?php echo $filename; ?>&lines=100">100</a> / 
 <a href="<?php echo $url ?>?status=<?php echo $status; ?>&filename=<?php echo $filename; ?>&lines=200">200</a> | 
 <br>
-<a href="<?php echo $url ?>?status=<?php echo $status; ?>?filename=./Insurgency-chat1.log&lines=<?php echo $lines_; ?>">Server1</a>&emsp;
-<a href="<?php echo $url ?>?status=<?php echo $status; ?>?filename=./Insurgency-chat2.log&lines=<?php echo $lines_; ?>">Server2</a>&emsp;
-<a href="<?php echo $url ?>?status=<?php echo $status; ?>?filename=./Insurgency-chat3.log&lines=<?php echo $lines_; ?>">Server3</a>&emsp;
-<a href="<?php echo $url ?>?status=<?php echo $status; ?>?filename=./Insurgency-chat4.log&lines=<?php echo $lines_; ?>">Server4</a>
-
-
+<a href="<?php echo $url ?>?status=<?php echo $status; ?>&filename=./Insurgency-chat1.log&lines=<?php echo $lines_; ?>">Server1</a>&emsp;
+<a href="<?php echo $url ?>?status=<?php echo $status; ?>&filename=./Insurgency-chat2.log&lines=<?php echo $lines_; ?>">Server2</a>&emsp;
+<a href="<?php echo $url ?>?status=<?php echo $status; ?>&filename=./Insurgency-chat3.log&lines=<?php echo $lines_; ?>">Server3</a>&emsp;
+<a href="<?php echo $url ?>?status=<?php echo $status; ?>&filename=./Insurgency-chat4.log&lines=<?php echo $lines_; ?>">Server4</a>
 
 </div>
 
