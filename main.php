@@ -1,5 +1,7 @@
 <div class="header">
+
 <div class="hl">
+
 <?php
 $url = strtok($_SERVER["REQUEST_URI"], '?');
 if ($url = 'main.php') { $url = "" ;}
@@ -9,10 +11,20 @@ $lines_ = $_GET['lines'] ?? '100';
 $lines = $lines_ * 2;
 echo "Server: &emsp;$filename | Lines: $lines_";
 ?>
+
+
+
 <br>
 
 Reload: 
-<?php if (is_numeric($status)) { echo "<a href=$url?status=Stop&filename=$filename&lines=$lines_>Stop</a>";} else {echo "<a href=$url?status=20&filename=$filename&lines=$lines_>Start</a>";} ?>
+<?php 
+if (is_numeric($status)) { 
+echo "<a href=$url?status=Stop&filename=$filename&lines=$lines_>Stop</a>";
+} 
+else {
+echo "<a href=$url?status=20&filename=$filename&lines=$lines_>Start</a>";
+echo "<div class='zoom'><button id='increase'>zoom +</button><br><button id='decrease'>zoom -</button></div>";
+} ?>
 
 Lines: 
 <a href="<?php echo $url ?>?status=<?php echo $status; ?>&filename=<?php echo $filename; ?>&lines=50">50</a> / 
@@ -34,8 +46,8 @@ Lines:
 </div>
 </div>
 
-<div class="log-wrap">
-<?php
-include 'reverseline.php';
-?>
-</div>
+<div class="log-wrap"><?php include 'reverseline.php'; ?></div>
+
+<br><br><br><br>
+
+
