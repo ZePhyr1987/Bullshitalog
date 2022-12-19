@@ -36,7 +36,7 @@ should be all :)<br>
 OBS CSS example:
 <details> 
   <summary></summary>
-<img src="https://user-images.githubusercontent.com/4016000/194682395-77c82aba-838f-4803-8ca7-c5f438aec567.jpg">
+<img src="https://user-images.githubusercontent.com/4016000/208508760-c9e8e4c6-ebdf-4e2d-bb06-a9f3e7444349.jpg">
 
 </details>
 URL: http://bullshitalot.net/log/?status=20&filename=./Insurgency-chat2.log&lines=50<br>
