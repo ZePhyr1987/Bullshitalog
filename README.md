@@ -12,7 +12,7 @@ Linux ;P (should run on windows server if you have something similar to Tail/Mul
 -screen<br>
 -Multitail<br>
 -webserver<br>
--github Bullshitalog Download the two files an drop them into some frontend folder.<p>
+-github Bullshitalog Download the files an drop them into some frontend folder.<p>
 
 My example with 4 servers.:<br>
 My Multitail command:<p>
@@ -39,20 +39,22 @@ OBS CSS example:
 <img src="https://user-images.githubusercontent.com/4016000/194682395-77c82aba-838f-4803-8ca7-c5f438aec567.jpg">
 
 </details>
-
-
-
-<code>body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
+URL: http://bullshitalot.net/log/?status=20&filename=./Insurgency-chat2.log&lines=50<br>
+Width: 900<br>
+Height: 220<br>
+<br>
+<code>
+body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden;}
 .header,.hr,.hl {display: none;}
-.log-wrap {
-	position: 	fixed;
-	left: 		0;
-	top: 		0em;
-	width:calc(100% - 46x);
-	overflow:	auto;
-}
-</code>
---------------------------------------------------------------------------------------------------------------------------------
+.log-wrap {	position: fixed;left: 0px; top: 0em;}
+.chatdn	{background-color: rgba(0, 0, 0, 0.8)} 
+.chatname	{background-color: rgba(255, 255, 255, 0.6)} 
+.chatg	{background-color: rgba(153, 204, 204, 0.6)} 
+.chatt0	{background-color: rgba(204, 153, 102, 0.6)} 
+.chatt1 	{background-color: rgba(102, 153, 204, 0.6)} 
+.chatadmin	{background-color: rgba(252, 136, 0, 0.6)} 
+</code><br>
+--------------------------------------------------------------------------------------------------------------------------------<br>
 Roadmap:<br>
 -maybe map change etc<br>
 -maybe rcon input<br>
